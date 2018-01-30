@@ -12,6 +12,8 @@
     "build": "babel -o ignore.js index.js",
     "test": "npm run build && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec ./test/ignore.js && codecov",
     "test-no-cov": "npm run build && mocha --reporter spec ./test/ignore.js",
+    "test:git": "mocha --reporter spec ./test/git-check-ignore.js",
+    "bench": "",
     "cov-report": "istanbul report"
   },
   "repository": {
